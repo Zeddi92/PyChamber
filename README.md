@@ -2,6 +2,8 @@
 
 PyChamber ist ein Python-Skript, das eine Nebelkammer-Simulation implementiert. Eine Nebelkammer wird verwendet, um die Spuren von geladenen Teilchen zu visualisieren. Das Skript nutzt die Pygame-Bibliothek, um die Simulation darzustellen.
 
+![Example of the simulation](Beispielvideo.gif)
+
 
 ## main.py
 
