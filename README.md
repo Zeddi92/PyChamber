@@ -45,3 +45,32 @@ Die Hauptschleife der Simulation enthält die folgenden Schritte:
 6. Darstellung der Nebelkammer und der Spuren auf dem Bildschirm.
 
 Bitte beachten Sie, dass dies nur eine grobe Übersicht des Skripts ist. Weitere Details und Funktionalitäten können dem Code direkt entnommen werden.
+
+## nebelkammer.py
+
+Die `nebelkammer.py`-Datei enthält Funktionen für die Generierung von verschiedenen Spuren in der Nebelkammer.
+
+### Parameter
+
+- `rain_flux`: Der Niederschlagsfluss in der Nebelkammer.
+- `muon_flux`: Der Myonenfluss in Myonen pro Quadratzentimeter.
+- `expected_angle`: Der erwartete Eintrittswinkel der Myonen in Grad.
+- `std_dev_angle`: Die Standardabweichung des Eintrittswinkels der Myonen in Grad.
+- `muon_lifetime`: Die Lebensdauer eines Myons in Mikrosekunden.
+- `activity_concentration`: Die Aktivitätskonzentration von Radon in Bq/m^3.
+- `alpha_energy`: Die Energie der Alpha-Teilchen in MeV.
+- `activity_concentration_beta`: Die Aktivitätskonzentration von Beta-Teilchen in Bq/m^3.
+- `max_steps_beta`: Die maximale Länge der Beta-Teilchen-Spur.
+- `step_length`: Die Schrittlänge für die Spurgenerierung.
+- `particle_size`: Die Größe der Teilchen.
+
+### Funktionen
+
+1. `generate_rain`: Generiert Niederschlag in der Nebelkammer.
+2. `generate_muon_trace`: Generiert eine Myonenspur in der Nebelkammer.
+3. `generate_electron_trace`: Generiert eine Elektronenspur basierend auf einem Myonenzefalls.
+4. `generate_alpha_trace`: Generiert eine Alpha-Teilchen-Spur in der Nebelkammer.
+5. `bethe_alpha`: Berechnet die Länge der Alpha-Teilchen-Spur basierend auf der Energie und der Geschwindigkeit.
+6. Weitere interne Hilfsfunktionen.
+
+Bitte beachten Sie, dass diese Übersicht die wichtigsten Funktionen und Parameter in der `nebelkammer.py`-Datei enthält. Für weitere Details und Implementierungsdetails können Sie den Code direkt überprüfen.
