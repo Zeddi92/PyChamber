@@ -16,9 +16,9 @@ Das `main.py`-Skript enthält den Hauptcode für die Nebelkammer-Simulation.
 
 ### Parameter
 
-- `grid_size_x`: Die Größe des Nebelkammer-Rasters in x-Richtung [cm].
-- `grid_size_y`: Die Größe des Nebelkammer-Rasters in y-Richtung [cm].
-- `grid_size_z`: Die Dicke des sensitiven Bereichs in z-Richtung.
+- `grid_size_x`: Die Größe des Nebelkammer-Rasters in x-Richtung [in cm für die Simulation].
+- `grid_size_y`: Die Größe des Nebelkammer-Rasters in y-Richtung [in cm für die Simulation].
+- `grid_size_z`: Die Dicke des sensitiven Bereichs in z-Richtung [in cm für die Simulation].
 - `framerate`: Die Bildrate der Animation.
 - `window_size`: Die Größe des Darstellungsfensters.
 
@@ -29,11 +29,11 @@ Das `main.py`-Skript enthält den Hauptcode für die Nebelkammer-Simulation.
 
 ### Hauptfunktionen
 
-1. `generate_rain`: Generiert Niederschlag in der Nebelkammer.
-2. `generate_muon_trace`: Generiert eine Myonenspur, die auf der Oberseite der Nebelkammer ankommt.
-3. `generate_alpha_trace`: Generiert eine Alpha-Teilchen-Spur in der Nebelkammer.
-4. `generate_beta_trace`: Generiert eine Beta-Teilchen-Spur in der Nebelkammer.
-5. `generate_scale`: Generiert einen Massstab in der Nebelkammer.
+1. `generate_rain`: Generiert den Isopropanol Niederschlag in der Nebelkammer.
+2. `generate_muon_trace`: Generiert Myonenspuren, die auf der Oberseite der Nebelkammer ankommt.
+3. `generate_alpha_trace`: Generiert Alpha-Teilchen-Spuren in der Nebelkammer.
+4. `generate_beta_trace`: Generiert Beta-Teilchen-Spuren in der Nebelkammer.
+5. `generate_scale`: Generiert einen Massstab von 100 Schritten in der Nebelkammer. Für die Skalierung entsprechen hier 100 Schritte etwa 1,9 cm. Abhängig von dem Bildschirm kann sich dieser Maßstab ändern und mit `generate_scale` wird so ein Maßstab eingeblendet.
 
 ### Hauptschleife
 
@@ -64,7 +64,7 @@ Die `nebelkammer.py`-Datei enthält Funktionen für die Generierung von verschie
 - `activity_concentration_beta`: Die Aktivitätskonzentration von Beta-Teilchen in Bq/m^3.
 - `max_steps_beta`: Die maximale Länge der Beta-Teilchen-Spur.
 - `step_length`: Die Schrittlänge für die Spurgenerierung.
-- `particle_size`: Die Größe der Teilchen.
+- `particle_size`: Die Größe der Teilchen in der Darstellung.
 
 ### Funktionen
 
@@ -72,7 +72,7 @@ Die `nebelkammer.py`-Datei enthält Funktionen für die Generierung von verschie
 2. `generate_muon_trace`: Generiert eine Myonenspur in der Nebelkammer.
 3. `generate_electron_trace`: Generiert eine Elektronenspur basierend auf einem Myonenzefalls.
 4. `generate_alpha_trace`: Generiert eine Alpha-Teilchen-Spur in der Nebelkammer.
-5. `bethe_alpha`: Berechnet die Länge der Alpha-Teilchen-Spur basierend auf der Energie und der Geschwindigkeit.
+5. `bethe_alpha`: Berechnet die Länge der Alpha-Teilchen-Spur basierend auf der Energie und der Geschwindigkeit anhand der Bethe-Gloch-Formel.
 6. Weitere interne Hilfsfunktionen.
 
 Bitte beachten Sie, dass diese Übersicht die wichtigsten Funktionen und Parameter in der `nebelkammer.py`-Datei enthält. Für weitere Details und Implementierungsdetails können Sie den Code direkt überprüfen.
